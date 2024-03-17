@@ -17,7 +17,7 @@
   <br/>
 </div>
 
-**Spring Boot Assignment Readme**
+**Spring Boot JWT Role Based Authentication Readme**
 
 **Created by Danish**
 
@@ -27,7 +27,7 @@
 
 ## Description
 
-This repository contains the source code for the Spring Boot assignment. The assignment involves building a Spring Boot application that utilizes RESTful APIs and includes necessary configurations like JWT Role Based Authentication and Spring Security Configuration along with Database connectivity with mysql8.
+This repository contains the source code for the Spring Boot assignment. The assignment involves building a Spring Boot application that utilizes RESTful APIs and includes necessary configurations like JWT Role Based Authentication and Spring Security Configuration along with Database connectivity with MySQL8.
 
 ## Installation
 
@@ -73,6 +73,33 @@ The Spring Boot application utilizes the following configurations:
 
 2. Access the application at `http://localhost:8080` in your web browser.
 
+
+3. use postman to access registration url `http://localhost:8080/api/v1/auth/register` with
+required parameters 
+
+
+    {
+    "firstName": "user",
+    "lastName": "name",
+    "password": "L2zylpdt",
+    "email": "user@gmail.com",
+    "role": ["admin"]
+    }
+
+
+
+
+5. use postman to hit login url `http://localhost:8080/api/v1/auth/login` with credentials 
+#### Danish
+
+   email:- danish@gmail.com & password:- 12345
+   #### Sibani
+   email:- sibani@gmail.com & password :- 12345,
+
+    {
+    "password": "12345",
+    "email": "danish@gmail.com"
+    }
 ## Additional Notes
 
 - Ensure that all dependencies specified in the `pom.xml` file are resolved.
