@@ -34,7 +34,7 @@ This repository contains the source code for the Spring Boot assignment. The ass
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/Md-Danish-Saifi/spring-boot-assignment.git
+    git clone https://github.com/Md-Danish-Saifi/springboot-jwt-auth.git
     ```
 
 2. Navigate to the project directory:
