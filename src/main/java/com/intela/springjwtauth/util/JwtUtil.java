@@ -9,10 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 
 
@@ -71,5 +68,21 @@ public class JwtUtil {
     private Key getSigningKey() {
         byte[] keyBytes = Base64.getDecoder().decode(SECRET_KEY);
         return Keys.hmacShaKeyFor(keyBytes);
+    }
+
+    public String getExpirationTime(String token) {
+
+        final String jwt;
+        jwt = token.split(" ")[1].trim();
+
+
+        Claims claims = Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(jwt).getBody();
+
+        // Get the expiration time
+        Date expiration = claims.getExpiration();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(expiration);
+        String expirationTime = cal.get(Calendar.HOUR_OF_DAY) +":"+cal.get(Calendar.MINUTE)+":"+cal.get(Calendar.SECOND)+" "+cal.get(Calendar.DATE)+"/"+(cal.get(Calendar.MONTH)+1)+"/"+cal.get(Calendar.YEAR);
+        return expirationTime;
     }
 }

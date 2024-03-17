@@ -1,8 +1,8 @@
 package com.intela.springjwtauth.Controllers;
 
-import com.intela.springjwtauth.models.AuthenticateRequest;
-import com.intela.springjwtauth.models.AuthenticationResponse;
-import com.intela.springjwtauth.models.RegisterRequest;
+import com.intela.springjwtauth.dto.AuthenticateRequest;
+import com.intela.springjwtauth.dto.AuthenticationResponse;
+import com.intela.springjwtauth.dto.RegisterRequest;
 import com.intela.springjwtauth.services.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

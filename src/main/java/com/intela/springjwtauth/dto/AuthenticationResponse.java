@@ -1,4 +1,4 @@
-package com.intela.springjwtauth.models;
+package com.intela.springjwtauth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

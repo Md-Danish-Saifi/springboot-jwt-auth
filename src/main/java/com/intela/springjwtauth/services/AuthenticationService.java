@@ -1,5 +1,8 @@
 package com.intela.springjwtauth.services;
 
+import com.intela.springjwtauth.dto.AuthenticateRequest;
+import com.intela.springjwtauth.dto.AuthenticationResponse;
+import com.intela.springjwtauth.dto.RegisterRequest;
 import com.intela.springjwtauth.models.*;
 import com.intela.springjwtauth.repositories.UserRepository;
 import com.intela.springjwtauth.util.JwtUtil;
